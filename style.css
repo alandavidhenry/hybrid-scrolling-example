@@ -1,0 +1,84 @@
+html,
+body,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+section {
+  height: 60vh;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sticky_parent {
+  /* Adjust this to match the scroll duration in JavaScript */
+  height: calc(300vh * var(--scroll-duration, 3));
+}
+
+.sticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border: 2px solid red;
+}
+
+.scroll_section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 400vw; /* 100vw per box */
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  transform: translate3d(calc(var(--scroll-progress, 0) / 100 * -300vw), 0, 0);
+  border: 2px solid black;
+}
+
+.box {
+  flex: 0 0 50vw;
+  height: 90%;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid greenyellow;
+}
+
+.box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  max-width: 800px;
+}
+
+.box img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.box p {
+  margin-top: 1rem;
+  text-align: center;
+}
